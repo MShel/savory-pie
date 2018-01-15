@@ -219,4 +219,3 @@ class HaystackSearchResourceTest(unittest.TestCase):
             mock.call.models(TestModel),
             mock.call.count()
         ])
-
