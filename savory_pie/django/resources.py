@@ -363,7 +363,7 @@ class ModelResource(Resource):
             except AttributeError:
                 pass
             else:
-                save(self.model)
+                self.model.save()
 
     def put(self, ctx, source_dict, save=True, skip_validation=False):
         '''
