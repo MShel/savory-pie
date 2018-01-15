@@ -195,7 +195,7 @@ class HaystackSearchResourceTest(unittest.TestCase):
         )
         self.assertEqual(qs.method_calls[0], mock.call.models(TestModel))
         self.assertTrue('call.filter(content=<AutoQuery \'foo bar\'>)' in str(qs.method_calls[1]))
-        self.assertEqual(qs.method_calls[2] ,mock.call.count())
+        self.assertEqual(qs.method_calls[2], mock.call.count())
 
     @mock.patch('savory_pie.django.haystack_resources.SearchQuerySet')
     def test_updated_filter(self, SearchQuerySet):
@@ -219,3 +219,4 @@ class HaystackSearchResourceTest(unittest.TestCase):
             mock.call.models(TestModel),
             mock.call.count()
         ])
+
