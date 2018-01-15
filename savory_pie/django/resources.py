@@ -359,7 +359,7 @@ class ModelResource(Resource):
 
         for field in self.fields:
             try:
-                save = field.save
+                field.save
             except AttributeError:
                 pass
             else:
